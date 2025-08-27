@@ -1,15 +1,22 @@
 "use client";
 
-import { useContext, useEffect, useState } from "react";
+import { Suspense, useContext, useEffect, useState } from "react";
 import { IoPersonOutline } from "react-icons/io5";
 import { assets } from "../assets/assets";
 import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 const Login = () => {
+    return (
+        <Suspense fallback={"Loading..."}>
+            <LoginContents />
+        </Suspense>
+    );
+};
+const LoginContents = () => {
     const [state, setState] = useState("Login");
     const { setShowLogin, backendUrl, setToken, setUser } =
         useContext(AppContext);
