@@ -27,6 +27,13 @@ IMAGE_KIT_URL_ENDPOINT=Your_imagekit_endpoint
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+<img width="1857" height="1105" alt="image" src="https://github.com/user-attachments/assets/a0e07c64-08f2-42bc-9b6f-55cdae5be9e6" />
+
+<img width="1854" height="931" alt="image" src="https://github.com/user-attachments/assets/b74dcab5-9ae7-4a6a-9af1-ee63dcc26487" />
+
+<img width="1850" height="1104" alt="image" src="https://github.com/user-attachments/assets/02ba284a-e4ec-470c-8a63-8e435c1cc1ae" />
+
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
