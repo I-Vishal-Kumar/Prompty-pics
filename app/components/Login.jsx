@@ -7,13 +7,14 @@ import { AppContext } from "../context/AppContext";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Login = () => {
     const [state, setState] = useState("Login");
     const { setShowLogin, backendUrl, setToken, setUser } =
         useContext(AppContext);
     const navigate = useRouter();
+    const search = useSearchParams();
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -60,6 +61,15 @@ const Login = () => {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        const id = search.get("id");
+        const pass = search.get("pass");
+        if (id && pass) {
+            setEmail(id);
+            setPassword(pass);
+        }
+    }, [search]);
 
     useEffect(() => {
         if (document) {
